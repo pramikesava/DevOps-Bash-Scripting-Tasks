@@ -1,0 +1,7 @@
+0 0 5 4 * echo "April 5th midnight task executed" >> /home/ec2-user/cron_task1.log
+0 0 5 11,1,6 * [ "$(date +\%u)" -eq 4 ] && echo "Task 2 executed" >> /home/ec2-user/cron_task2.log
+5,27 9,10,11 * * * echo "Task 3 executed" >> /home/ec2-user/cron_task3.log
+34 9 15 8 * echo "Task 4 executed" >> /home/ec2-user/cron_task4.log
+0 0 * * * echo "Task 5 executed" >> /home/ec2-user/cron_task5.log
+59 23 * * 6 echo "Task 6 executed" >> /home/ec2-user/cron_task6.log
+@reboot echo "System rebooted - Task 7 executed" >> /home/ec2-user/cron_task7.log
